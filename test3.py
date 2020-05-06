@@ -4,7 +4,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun 12 13:34:48 2019
-
 @author: hana
 """
 
@@ -21,14 +20,14 @@ import re
 
 
 #belen unshuulah datanii heseg mongol ugiig utf8 aar unshuulj bga 
-data = pd.read_csv("1111_dataset.csv",encoding='UTF-8')
+data = pd.read_csv("aaaa.csv",encoding='UTF-8')
 class Nana:
     def __init__(self):
         # Файлаас зогсох үг буюу туслах үгнүүдийг унших
-        with open('1111_dataset.csv', 'r') as f:
+        with open('aaaa.csv', 'r') as f:
             self.stopwords = f.read().split('\n')
         # Файлаас залгаваруудыг унших
-        with open('1111_dataset.csv', 'r') as f:
+        with open('aaaa.csv', 'r') as f:
             self.rules = f.read().split('\n')
         # Залгавар үгнүүдийн REGEX үүсгэх 
         self.rulesREGEXP = '$|'.join(self.rules)+'$'
@@ -55,26 +54,26 @@ class Nana:
 
 
 
-data = data[['content', 'type_text']]
+data = data[['asuult', 'angilal']]
 
 
 #datanii category nii torluudiig harna
-data.type_text.unique()
+data.angilal.unique()
 
-data.groupby('type_text').describe()
+data.groupby('angilal').describe()
 
 
 
 
 #data end toon utguudiig ogno 
-data['NUM_type_text']=data.type_text.map({'Гомдол':0,'Санал хүсэлт':1,'Талархал':2,'Шүүмжлэл':3,'Өргөдөл':4})
+data['NUM_angilal']=data.angilal.map({'Сэргээн санах':0,'Ойлгох':1,'Хэрэглэх':2,'Задлан шинжлэх':3,'Үнэлэх':4, 'Бүтээх':5})
 data.head()
 
 
 
 
 #dataset iin huvaaltiin hesguud 
-x_train, x_test, y_train, y_test = train_test_split(data.content, data.NUM_type_text, random_state=0, test_size=0.2)
+x_train, x_test, y_train, y_test = train_test_split(data.asuult, data.NUM_angilal, random_state=0, test_size=0.2)
 
 
 
@@ -84,9 +83,9 @@ x_train, x_test, y_train, y_test = train_test_split(data.content, data.NUM_type_
 start = time.clock()
 
 vect = CountVectorizer(ngram_range=(2,2))
-X_train = vect.fit_transform(x_train)
-#surgaltiin datag toon vectorluu horvuuleh
-X_test = vect.transform(x_test)
+x_train = vect.fit_transform(x_train)
+#surgaltiin datag toon vectorluu horvuuleha
+x_test = vect.transform(x_test)
 
 print (vect)
 print (time.clock()-start)
@@ -107,9 +106,9 @@ start = time.clock()
 
 mnb = MultinomialNB(alpha =0.2)
 
-mnb.fit(X_train,y_train)
+mnb.fit(x_train,y_train)
 
-result= mnb.predict(X_test)
+result= mnb.predict(x_test)
 
 print(mnb)
 print (time.clock()-start)
@@ -132,15 +131,17 @@ def predict_news(news):
     test = vect.transform(news)
     pred= mnb.predict(test)
     if pred  == 0:
-         return 'Гомдол'
+         return 'Сэргээн санах' 
     elif pred ==1 :
-        return 'Санал хүсэлт'
+        return 'Ойлгох'
     elif pred ==2 :
-        return 'Талархал'
+        return 'Хэрэглэх'
     elif pred ==3 :
-        return 'Шүүмжлэл'
-    else : 
+        return 'Задлан шинжлэх'
+    elif pred ==4 : 
         return 'Өргөдөл'
+    else : 
+        return 'Бүтээх'
 
 
     
@@ -148,7 +149,7 @@ def predict_news(news):
 
 
 
-x=["баянзүрх дүүргийн иргэн, шилжилт хөдөлгөөн хйигдэхээс өмнө сүхбаатар дүүрэг рүү шилжээд,"]
+x=["Дугаарлалтанд үсэг-цифрийн форматыгашиглана"]
 r = predict_news(x)
 print (r)
 
@@ -159,7 +160,3 @@ print (r)
 from sklearn.metrics import confusion_matrix
 
 confusion_matrix(y_test, result)
-
-
-
-

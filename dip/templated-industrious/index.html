@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Тест ангилагч</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		
+		<link rel="stylesheet" href="assets/css/main.css" />
+	    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">Тест ангилагч</a>
+				<nav>
+					<a href="#menu">Цонх</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Үндсэн</a></li>
+					<!-- <li><a href="elements.html">Элэмэнт</a></li> -->
+					<!-- <li><a href="generic.html">Тодорхой</a></li> -->
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1 class="hero-text">
+						Машины сургалтын алгоритм ашиглан Блумын таксономийн тусламжтайгаар асуулгын хуудсыг ангилах
+					</h1>
+				</div>
+				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h1>Асуултын хуудсыг Блумын Таксономийн дагуу ангилах энгийн хэрэгсэл юм.</h1>
+					</header>
+				</div>
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-3 my-2">
+							<div class="chart-heading justify-content-center">
+								<ul class="legend">
+									<li><span class="analysis"></span> Задлан шинжлэх</li>
+									<li><span class="application"></span> Хэрэглэх</li>
+									<li><span class="creation"></span> Бүтээх</li>
+									<li><span class="evaluation"></span> Үнэлэх</li>
+									<li><span class="remembering"></span> Сэргээн санах</li>
+									<li><span class="understanding"></span> Ойлгох</li>
+								</ul>
+								<br>
+								<div>
+									<h6>Эхний өгөгдөлийн хувьд</h6>
+								</div>
+							</div>
+							<div class="canvas-wrapper">
+								<canvas id="uniChartOne" width="100%" height="100%"></canvas>
+							</div>
+						</div>
+						<div class="col-lg-6 my-2 show-for-desktop">
+							<div class="uni-summary">
+								<h2>Машины сургалтын алгоритм ашиглан Блумын таксономийн тусламжтайгаар асуулгын хуудсыг ангилах</h2>
+							</div>
+						</div>
+						<div class="col-lg-3 my-2">
+							<div class="chart-heading">
+								<ul class="legend">
+									<li><span class="analysis"></span> Задлан шинжлэх</li>
+									<li><span class="application"></span> Хэрэглэх</li>
+									<li><span class="creation"></span> Бүтээх</li>
+									<li><span class="evaluation"></span> Үнэлэх</li>
+									<li><span class="remembering"></span> Сэргээн санах</li>
+									<li><span class="understanding"></span> Ойлгох</li>
+								</ul>
+								<br>
+								<h6>Хоёрдох өгөгдөлийн хувьд</h6>
+							</div>
+							<div class="canvas-wrapper">
+								<canvas id="uniChartTwo" width="100%" height="100%"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-lg-3 my-2">
+							<div class="chart-heading">
+								<ul class="legend">
+									<li><span class="analysis"></span> Задлан шинжлэх</li>
+									<li><span class="application"></span> Хэрэглэх</li>
+									<li><span class="creation"></span> Бүтээх</li>
+									<li><span class="evaluation"></span> Үнэлэх</li>
+									<li><span class="remembering"></span> Сэргээн санах</li>
+									<li><span class="understanding"></span> Ойлгох</li>
+								</ul>
+								<br>
+								<h6>Гуравдах өгөгдөлийн хувьд</h6>
+							</div>
+							<div class="canvas-wrapper">
+								<canvas id="uniChartThree" width="100%" height="100%"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<h1 class="text-center">Өөрийн материалаа хянуулах уу</h1>
+					<form>
+						<div class="row">
+							<div class="col-lg-10">
+								<div class="form-group row question-form">
+									<label for="question" class="col-lg-1 col-md-2 col-sm-2 col-form-label">Асуулт</label>
+									<div class="col-lg-10 offset-lg-1 col-md-10 col-sm-10">
+										<input id="question-input" name="question" type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2 buttons">
+								<button disabled type="button" class="btn btn-lg btn-outline-primary" id="add-question">Асуулт нэмэх</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+		<!-- Testimonials -->
+			<section class="wrapper">
+				<div class="container">
+					<h1 class="text-center">Өөрийн материалаа хянуулах уу</h1>
+					<form>
+						<div class="row">
+							<div class="col-lg-10">
+								<div class="form-group row question-form">
+									<label for="question" class="col-lg-1 col-md-2 col-sm-2 col-form-label">Асуулт</label>
+									<div class="col-lg-10 offset-lg-1 col-md-10 col-sm-10">
+										<input id="question-input" name="question" type="text" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-2 buttons">
+								<button disabled type="button" class="btn btn-lg btn-outline-primary" id="add-question">Асуулт нэмэх</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="container jumbotron">
+
+					<div id="added-paper">
+						<h3><span id="paper-heading">Материалаас оруулана уу</span></h3>
+						<div>
+							<ol id="question-list"></ol>
+							<button type="button" class="btn btn-lg btn-outline-success" id="submit">Оруулах</button>
+						</div>
+					</div>
+	
+					<div id="summary-paper">
+						<h2 class="text-center">Дүгнэлт</h2>
+						<div class="row">
+							<div class="col-lg-8 col-md-12 summary-wrapper">
+								<ol id="question-summary"></ol>
+							</div>
+							<div class="col-lg-4 mb-4">
+								<ul class="legend">
+									<li><span class="analysis"></span> Задлан шинжлэх</li>
+									<li><span class="application"></span> Хэрэглэх</li>
+									<li><span class="creation"></span> Бүтээх</li>
+									<li><span class="evaluation"></span> Үнэлэх</li>
+									<li><span class="remembering"></span> Сэргээн санах</li>
+									<li><span class="understanding"></span> Ойлгох</li>
+								</ul>
+								<canvas id="summaryChart"></canvas>
+							</div>
+						</div>
+	
+						<!-- RESET BUTTON -->
+						<div id="reset">
+							<button type="button" class="btn btn-lg btn-outline-primary">
+								Дахиад өөрийг үзнэ үү
+							</button>
+						</div>
+					</div>
+	
+					<!-- LOADER -->
+					<div id="loader" class="text-center">
+						<img src="assets/images/Facebook-0.9s-200px.gif" alt="loader">
+					</div>
+	
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>Таксономийн танилт</h3>
+						</section>
+						<section>
+							<h4>Нэмэлт</h4>
+							<ul class="alt">
+								<li><a href="#">Оюунцэцэг</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Magna sed ipsum</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Templates -->
+	<script id="question-template" type="text/template">
+		<li class="question">
+			<div>
+				<h4>{{question}}</h4>
+			</div>
+		</li>
+	</script>
+
+	<script id="question-result-template" type="text/template">
+		<li class="result question">
+			<div>
+				<h4>{{question}} - {{class}}</h4>
+			</div>
+		</li>
+	</script>
+
+	<script id="summary-template" type="text/template">
+		<li>
+			<div>
+				<h4>{{class}} - {{percentage}}</h4>
+			</div>
+		</li>
+	</script>
+
+	<script src="./assets/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="./assets/js/libs/mustache.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/chart.js"></script>
+
+	</body>
+</html>

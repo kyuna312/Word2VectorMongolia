@@ -6,8 +6,4 @@
 </p>
 
 ### Word2Vec аргачлалыг ашиглан хялбар машин сургалтаар тест ангилах ажил ###
-###
-<p align="center">
-   <a href="https://www.kaggle.com/hanayoshikage/mongolian-text-clustering">## Миний kaggle хаягын url</a>
-</p>
-###
+### <p align="center"> <a href="https://www.kaggle.com/hanayoshikage/mongolian-text-clustering">Миний kaggle хаягын url</a> </p> ###

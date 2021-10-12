@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box; }
+  
+  html {
+    font-family: 62.5%; }
+  
+  body {
+    background-color: #e6f2ff;
+    color: #222;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6; }
+  
+  button {
+    cursor: pointer;
+    outline: none; }
+  
+  .jumbotron {
+    min-height: 300px; }
+  
+  .uni-summary,
+  .chart-heading {
+    display: none; }
+  
+  button:disabled {
+    cursor: default; }
+  
+  #loader {
+    display: none; }
+  
+  #summary {
+    display: none; }
+  
+  #summary-paper {
+    display: none; }
+  
+  #reset {
+    float: right; }
+  
+  @media (min-width: 992px) {
+    .show-for-mobile {
+      display: none; } }
+  
+  @media (max-width: 992px) {
+    .show-for-desktop {
+      display: none; } }
+  
+  .section-heading {
+    background-image: url("44921200_2200533720230044_3326014569419112448_n.jpg");
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 4.8rem 0;
+    text-align: center;
+    letter-spacing: 0.07rem;
+    word-spacing: 0.15rem; }
+    .section-heading .hero-text {
+      font-size: 4.0rem;
+      letter-spacing: 0.1rem;
+    }
+  
+  .section-uni {
+    padding: 3.2rem 0; }
+    .section-uni .uni-summary {
+      text-align: center;
+      letter-spacing: 0.08rem; }
+    .section-uni .show-for-desktop .uni-summary {
+      position: absolute;
+      bottom: 8em; }
+    .section-uni .show-for-mobile {
+      padding: 1.6rem; }
+    @media (max-width: 45rem) {
+      .section-uni {
+        padding-top: 0; } }
+  
+  .chart-heading h6 {
+    margin-bottom: 15px;
+    margin-top: 44.76px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.75); }
+  
+  @media (max-width: 992px) {
+    .chart-heading h6 {
+      margin-top: 0; } }
+  
+  @media (max-width: 992px) {
+    .canvas-wrapper {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem; } }
+  
+  .legend {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    /* your colors */ }
+    .legend li {
+      font-size: 14px;
+      float: left;
+      display: flex;
+      align-items: center;
+      margin-right: 6px;
+      justify-content: center;
+      vertical-align: middle; }
+    .legend span {
+      float: left;
+      width: 22px;
+      height: 14px;
+      margin: 2px; }
+    .legend .analysis {
+      background-color: rgba(255, 99, 132, 0.2);
+      border: 1px solid #ff6384; }
+    .legend .application {
+      background-color: rgba(54, 162, 235, 0.2);
+      border: 1px solid #36a2eb; }
+    .legend .understanding {
+      background-color: rgba(255, 206, 86, 0.2);
+      border: 1px solid #ffce56; }
+    .legend .evaluation {
+      background-color: rgba(75, 192, 192, 0.2);
+      border: 1px solid #4bc0c0; }
+    .legend .remembering {
+      background-color: rgba(153, 102, 255, 0.2);
+      border: 1px solid #9966ff; }
+    .legend .creation {
+      background-color: rgba(255, 159, 64, 0.2);
+      border: 1px solid #ff9f40; }
+    @media (max-width: 992px) {
+      .legend {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; } }
+    @media (max-width: 45rem) {
+      .legend li {
+        font-size: 14px; }
+      .legend span {
+        width: 10px;
+        height: 10px; } }
+  
+  .section-form {
+    padding: 3.2rem 0 1.6rem 0; }
+    .section-form h1 {
+      font-size: 3.2rem;
+      margin-bottom: 3.2rem; }
+    .section-form form {
+      margin: 1.6rem; }
+    .section-form label {
+      padding-right: 0.6rem;
+      font-size: 1.4rem;
+      vertical-align: middle; }
+    .section-form input {
+      height: 47.9514px; }
+    .section-form .buttons {
+      text-align: center;
+      margin-right: 0; }
+    .section-form button {
+      width: 100%; }
+    @media (max-width: 45rem) {
+      .section-form {
+        padding: 1.6rem 0; }
+        .section-form h1 {
+          font-size: 2.2rem; }
+        .section-form label {
+          padding-right: 1rem;
+          text-align: left; } }
+  
+  .section-added-questions .jumbotron {
+    padding-top: 2.5rem; }
+  
+  .section-added-questions h3 {
+    text-align: center;
+    font-size: 1.8rem; }
+  
+  .section-added-questions #submit {
+    display: none;
+    float: right;
+    color: cornflowerblue; 
+  }
+  
+  @media (max-width: 992) {
+    .section-added-questions .summary-wrapper {
+      justify-content: center;
+      color: skyblue; 
+    } }
